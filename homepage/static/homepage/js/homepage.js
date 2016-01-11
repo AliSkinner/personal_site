@@ -1,1 +1,5 @@
-console.log('homepage.js')
+$(document).ready(function(){
+
+  // $('.panel').mouseenter
+
+})

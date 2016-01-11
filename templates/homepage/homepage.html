@@ -1,10 +1,26 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 
-
 {% block content %}
 <link rel="stylesheet" href="{% static 'homepage/css/homepage.css' %}" media="screen" title="no title" charset="utf-8">
-<h1>{{hello}}</h1>
+
+
+<div class="row">
+  <ul class="img-list">
+    {% for item in items %}
+      <li class="col-xs-10 col-xs-offset-1 col-sm-3">
+        <a href="{{item.url}}">
+          <img src="{{item.image}}" width="150" height="150" alt="{{item.label}}" />
+          <span class="description"><span>{{item.description}}</span></span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+
+
+
 
 <footer>
   <script type="text/javascript" src="{% static 'homepage/js/homepage.js' %}"></script>
