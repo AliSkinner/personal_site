@@ -1,1 +1,1 @@
-h2{color:red}
+body{background-color:#f0eceb}header{background:#283018;width:100%;color:#f0eceb;padding-top:1em}header h1{display:inline;font-size:4em}header #fork,header #hamburger{font-size:3em}header #fork:hover,header #hamburger:hover{opacity:.5}#nav-list{font-size:1.5em;padding-top:3em}#nav-list ul{border-right:1px dashed #283018}#nav-list ul li{line-height:2}.main-footer{background-color:#283018;border-color:#283018;color:#283018;font-size:3em}.main-footer a{color:#f0eceb}.main-footer a:hover{opacity:.5}

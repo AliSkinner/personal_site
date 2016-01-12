@@ -1,5 +1,46 @@
 // out: ../css/style.css, compress: true
 
-h2 {
-    color:red;
+body {
+  background-color:#f0eceb;
+}
+header {
+  h1 {
+    display:inline;
+    font-size: 4em;
+  }
+  #fork, #hamburger {
+    font-size: 3em;
+    &:hover {
+      opacity:.5;
+    }
+  }
+
+  background:#283018;
+  width:100%;
+  color:#f0eceb;
+  padding-top:1em;
+}
+
+#nav-list {
+  font-size: 1.5em;
+  padding-top: 3em;
+  ul {
+    border-right: 1px dashed #283018;
+    li {
+      line-height: 2;
+    }
+  }
+}
+.main-footer{
+  background-color:#283018;
+  border-color:#283018;
+  // width:100%;
+  color:#283018;
+  font-size: 3em;
+  a {
+    color:#f0eceb;
+    &:hover {
+      opacity:.5;
+    }
+  }
 }

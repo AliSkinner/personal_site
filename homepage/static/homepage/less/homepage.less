@@ -1,36 +1,29 @@
 // out: ../css/homepage.css, compress: true
 
-ul.img-list {
-  list-style-type: none;
-  text-align: center;
-  li {
-    display: inline-block;
-    height: 150px;
-    position: relative;
-    width: 150px;
-    .description {
-      background: rgba(0,0,0,0.5);
-      color: white;
-      cursor: pointer;
-      display: table;
-      height: 150px;
-      left: 15px;
-      position: absolute;
-      top: 0;
-      width: 150px;
-      opacity: 0;
-      span {
-        display: table-cell;
-        text-align: center;
-        vertical-align: middle;
-      }
-    }
+.main-upper {
+  padding:4em 15px;
+  img {
+    border-radius: 100%;
+    width: 100%;
+  }
+  .cap {
+    display:table;
+    
+  }
+  .caption {
+    display:table-cell;
+    vertical-align:middle;
+  }
+  h2 {
+
+    text-align: center;
   }
 }
 
-
-
-
-ul.img-list li:hover span.description {
-  opacity: 1;
+.main-lower {
+  background-color: #729f98;
+  .block-text {
+    font-size: 1.5em;
+    padding: 1em 0;
+  }
 }
