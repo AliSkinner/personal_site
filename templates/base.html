@@ -14,10 +14,19 @@
         <div class="row">
           <header class="col-xs-12">
             <h1>Ali Skinner</h1>
-            <!-- <span id="header-icons pull-right"> -->
-              <i class="fa fa-code-fork pull-right" id="fork"></i>
-              <i class="fa fa-bars pull-right visible-xs" id="hamburger"></i>
-            <!-- </span> -->
+            <a href="#" id="fork" class="pull-right"><i class="fa fa-code-fork "></i></a>
+              <div class="dropdown visible-xs pull-right">
+                <a id="hamburger" data-target="#" href="http://example.com" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bars"></i></a>
+                  <ul class="dropdown-menu" aria-labelledby="dLabel">
+                    {% for item in items %}
+                    <li id="dropdown-{{item.label|lower}}" data-description="{{item.description}}">
+                      <a href="{{item.url}}">
+                        {{item.label|capfirst}}
+                      </a>
+                    </li>
+                    {% endfor %}
+                  </ul>
+              </div>
           </header>
         </div>
       </div>

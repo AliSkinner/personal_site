@@ -1,5 +1,8 @@
 $(document).ready(function(){
+  console.log('homepage.js')
 
-  // $('.panel').mouseenter
+  $('#nav-list > ul > li').mouseenter(function(){
+    console.log($(this))
+  })
 
 })
