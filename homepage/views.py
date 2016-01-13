@@ -4,8 +4,7 @@ from .models import Item
 
 def home(request):
     items = Item.objects.exclude(active=False)
-    context = {'hello': 'This is the homepage',
+    context = {
                 'items': items,
             }
-    print context
     return render(request, "homepage/homepage.html", context)
