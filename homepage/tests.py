@@ -6,11 +6,13 @@ Replace this with more appropriate tests for your application.
 """
 
 from django.test import TestCase
+from homepage.models import Item
 
 
-class SimpleTest(TestCase):
-    def test_basic_addition(self):
-        """
-        Tests that 1 + 1 always equals 2.
-        """
-        self.assertEqual(1 + 1, 2)
+class ItemsTestCase(TestCase):
+    def setUp(self):
+        Item.objects.create(label="A test item", url="www.testurl.com", image="images/me.jpg", description="a test description of blah blah blah", active=True)
+
+    def test_items_initialise_properly(self):
+        test_item = Item.objects.get(label="A test item")
+        self.assertEqual(test_item.url, "www.testurl.com")
