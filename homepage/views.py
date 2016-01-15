@@ -3,8 +3,10 @@ from django.shortcuts import render
 from .models import Item
 
 def home(request):
-    items = Item.objects.exclude(active=False)
+    # to change
     context = {
-                'items': items,
+                'portrait_pic': 'portrait_pic',
+                'tag_line': 'tag_line',
             }
+
     return render(request, "homepage/homepage.html", context)
