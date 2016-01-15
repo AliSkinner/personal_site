@@ -8,5 +8,8 @@ def home(request):
                 'portrait_pic': 'portrait_pic',
                 'tag_line': 'tag_line',
             }
-
     return render(request, "homepage/homepage.html", context)
+
+def contact(request):
+    context = {}
+    return render(request, "homepage/contact.html", context)
