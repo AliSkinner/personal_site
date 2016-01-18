@@ -12,14 +12,7 @@
     border-radius: 100%;
     width: 100%;
   }
-  // .cap {
-  //   display:table;
-  //
-  // }
-  // .caption {
-  //   display:table-cell;
-  //   vertical-align:middle;
-  // }
+
   h2 {
     text-align: center;
   }
@@ -39,28 +32,23 @@
     }
   }
 }
-
-@media (min-width:@screen-md) {
-  h2 {
-    padding-top:5em;
-  }
-}
-@media (max-width:@screen-sm) {
-  .block-text {
-    padding:3em 2em;
-    text-align: center;
-  }
-}
-@media (min-width:@screen-md) {
-  .block-text {
-    padding: 1em 0;
-    text-align: left;
-  }
-}
-
 .main-lower {
   background-color: @teal;
   .block-text {
     font-size: 1.5em;
+  }
+}
+
+.block-text {
+  padding:3em 2em;
+  text-align: center;
+}
+footer {
+  line-height:2;
+}
+
+@media (min-width:@screen-md-min) {
+  h2 {
+    padding-top :3em;
   }
 }
