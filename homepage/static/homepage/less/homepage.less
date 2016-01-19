@@ -4,7 +4,6 @@
 @import '../../../../static/less/bootstrap-variables.less';
 
 
-
 .main-upper {
   color:@dark-green;
   padding:4em 15px;
@@ -13,7 +12,7 @@
     width: 100%;
   }
 
-  h2 {
+  .strap-line {
     text-align: center;
   }
 }
@@ -40,15 +39,27 @@
 }
 
 .block-text {
-  padding:3em 2em;
+  padding:3em 2em 5em;
   text-align: center;
-}
-footer {
-  line-height:2;
 }
 
 @media (min-width:@screen-md-min) {
-  h2 {
+  .strap-line {
     padding-top :3em;
+  }
+}
+
+
+.contact {
+  ul, form {
+    display:inline-block;
+  }
+  ul {
+    padding-right: 5em;
+    line-height: 2;
+  }
+  .message-success {
+    display:inline-block;
+    padding-left: 2em;
   }
 }

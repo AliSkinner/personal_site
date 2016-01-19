@@ -51,6 +51,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'homepage',
+    'djrill',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -76,7 +77,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'personal_site',
         'USER': 'ali',
-        'PASSWORD': 'password26'
+        'PASSWORD': os.environ['PERSONAL_SITE_DB_KEY']
     }
 }
 
@@ -105,3 +106,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
     '/var/www/static/',
 ]
+
+MANDRILL_API_KEY = os.environ['MANDRILL_KEY']
+EMAIL_BACKEND = "djrill.mail.backends.djrill.DjrillBackend"
+DEFAULT_FROM_EMAIL = "ali@aliskinner.com"

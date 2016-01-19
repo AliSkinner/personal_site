@@ -8,20 +8,29 @@
 {% block content %}
 <link rel="stylesheet" href="{% static 'homepage/css/homepage.css' %}" media="screen" title="no title" charset="utf-8">
 
-
 {% include "includes/_item-sidebar.html" %}
-
-  <form class="" action="index.html" method="post">
-    <textarea name="name" rows="8" cols="40"></textarea>
-    <button type="submit" name="button">Send Email</button>
-  </form>
-
-
-
-
-
-
-
-
+<div class="col-sm-8 contact">
+  <h2>Get in Touch...</h2>
+  <h5>There are a number of ways of contacting me.</h5>
+  <div class="row">
+    <div class="col-sm-4">
+      <ul>
+        <li>Tweet me</li>
+        <li>Email me</li>
+        <li>LinkedIn me</li>
+        <li>GitHub me</li>
+        <li>Or fill in the box...</li>
+      </ul>
+    </div>
+    <div class="col-sm-8">
+      <form id="email-me-form" action="/email_me/" method="post" class="">
+        {% csrf_token %}
+        <textarea name="email-me-message" rows="8" cols="40"></textarea>
+        <br>
+        <button type="submit" name="button" class="btn btn-primary ">Send</button>
+      </form>
+    </div>
+  </div>
+</div>
 
 {% endblock content %}
