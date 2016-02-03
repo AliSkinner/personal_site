@@ -36,7 +36,7 @@ TEMPLATE_CONTEXT_PROCESSORS = ["django.contrib.auth.context_processors.auth",
 "django.template.context_processors.static",
 "django.template.context_processors.tz",
 "django.contrib.messages.context_processors.messages",
-"personal_site.context_processors.items_processor"]
+]
 
 ALLOWED_HOSTS = []
 
@@ -54,7 +54,8 @@ INSTALLED_APPS = (
     'djrill',
 )
 
-MIDDLEWARE_CLASSES = (
+MIDDLEWARE_CLASSES = [
+    'homepage.middleware.SidebarMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -62,7 +63,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-)
+]
 
 ROOT_URLCONF = 'personal_site.urls'
 
