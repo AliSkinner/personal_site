@@ -29,6 +29,15 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
+TEMPLATE_CONTEXT_PROCESSORS = ["django.contrib.auth.context_processors.auth",
+"django.template.context_processors.debug",
+"django.template.context_processors.i18n",
+"django.template.context_processors.media",
+"django.template.context_processors.static",
+"django.template.context_processors.tz",
+"django.contrib.messages.context_processors.messages",
+]
+
 ALLOWED_HOSTS = []
 
 
@@ -42,9 +51,11 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'homepage',
+    'djrill',
 )
 
-MIDDLEWARE_CLASSES = (
+MIDDLEWARE_CLASSES = [
+    'homepage.middleware.SidebarMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -52,7 +63,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-)
+]
 
 ROOT_URLCONF = 'personal_site.urls'
 
@@ -67,7 +78,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'personal_site',
         'USER': 'ali',
-        'PASSWORD': 'password26'
+        'PASSWORD': os.environ['PERSONAL_SITE_DB_KEY']
     }
 }
 
@@ -96,3 +107,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
     '/var/www/static/',
 ]
+
+MANDRILL_API_KEY = os.environ['MANDRILL_KEY']
+EMAIL_BACKEND = "djrill.mail.backends.djrill.DjrillBackend"
+DEFAULT_FROM_EMAIL = "ali@aliskinner.com"
