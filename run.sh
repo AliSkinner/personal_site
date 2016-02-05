@@ -1,2 +1,4 @@
 #!/bin/bash
-/home/ubuntu/.virtualenvs/personal_site/bin/python /home/ubuntu/personal_site/manage.py runserver 0.0.0.0:8000
+export MANDRILL_KEY=$3
+export PERSONAL_SITE_DB_KEY=$2
+exec /home/ubuntu/.virtualenvs/personal_site/bin/gunicorn --pythonpath '/home/ubuntu/personal_site' personal_site.wsgi

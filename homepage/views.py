@@ -34,8 +34,5 @@ def email_me(request):
 
     subject = 'Email Contact from AliSkinner.com'
     body = request.POST['email-me-message']
-    try:
-        send_mail(subject, body, settings.DEFAULT_FROM_EMAIL, ["awskinner26@gmail.com"])
-        return HttpResponse('success')
-    except Exception as e:
-        return HttpResponse('fail')
+    send_mail(subject, body, settings.DEFAULT_FROM_EMAIL, ["awskinner26@gmail.com"])
+    return HttpResponse('success')
