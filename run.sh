@@ -1,2 +1,2 @@
 #!/bin/bash
-/home/ubuntu/.virtualenvs/personal_site/bin/gunicorn /home/ubuntu/personal_site/personal_site.wsgi
+/home/ubuntu/.virtualenvs/personal_site/bin/python /home/ubuntu/personal_site/manage.py runserver 0.0.0.0:8000
