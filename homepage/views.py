@@ -1,10 +1,11 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from .models import Item
+from .models import Item, Project
 from django.core.mail import send_mail, EmailMultiAlternatives
 from django.conf import settings
 from django.template import loader
 from django.views.generic.base import TemplateView
+from django.views.generic.list import ListView
 
 class HomePageView(TemplateView):
     template_name = "homepage/homepage.html"
@@ -32,4 +33,12 @@ class AboutPageView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(AboutPageView, self).get_context_data(**kwargs)
+        return context
+
+class ProjectListView(ListView):
+    model = Project
+    template_name = "homepage/projects.html"
+
+    def get_context_data(self, **kwargs):
+        context = super(ProjectListView, self).get_context_data(**kwargs)
         return context

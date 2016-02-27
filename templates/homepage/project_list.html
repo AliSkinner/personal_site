@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block footer_js %}
+  <script type="text/javascript" src="{% static 'homepage/js/homepage.js' %}"></script>
+{% endblock footer_js%}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'homepage/css/homepage.css' %}" media="screen" title="no title" charset="utf-8">
+
+{% include "includes/_item-sidebar.html" %}
+  <h1>Projects</h1>
+  <div class="col-sm-10">
+    <ul class="list-unstyled">
+      <div class="row">
+        {% for project in project_list %}
+        <li class="col-sm-4 project-tile">
+          <img src="/{{project.image}}" alt="{{project.name}}" />
+        </li>
+        {% endfor%}
+      </div>
+    </ul>
+  </div>
+
+
+
+{% endblock content %}
