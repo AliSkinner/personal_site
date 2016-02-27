@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block footer_js %}
+  <script type="text/javascript" src="{% static 'homepage/js/homepage.js' %}"></script>
+{% endblock footer_js%}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'homepage/css/homepage.css' %}" media="screen" title="no title" charset="utf-8">
+
+{% include "includes/_item-sidebar.html" %}
+
+  <div class="col-sm-8 col-sm-offset-1">
+    <h1>About</h1>
+    <ul>
+      <li>Graduated in with BA in History of Modern & Comtemporary Art from Manchester</li>
+      <li>Worked 2009-2013 as a technician at <a href="http://flowersgallery.com">Flowers Gallery</a>. This involved installing and organinsing logistics for exhibitions, as well as installing artworks at collectors houses.</li>
+      <li>Moved to Loei Province, North-Eastern Thailand in April 2013, to work as an English teacher.</li>
+      <li>Moved to Bangkok in December 2013 - November 2014, continuing to teach.</li>
+      <li>January 2015 Started Web Development Immersive course at <a href="http://generalassemb.ly">General Assembly, London</a></li>
+      <li>June 2015 started first developer job, with <a href="http://justaddred.com/">JustAddRed, London.</a></li>
+    </ul>
+  </div>
+
+{% endblock content %}
