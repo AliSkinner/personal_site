@@ -12,6 +12,7 @@ $(document).ready(function(){
       if (response == 'success' ){
         $('[name="email-me-message"]').val('')
         $('button').after('<h4 class="message-success">Message Sent. Thanks!</h4>')
+        $('.message-success').fadeOut(5000)
       } else {
         console.log(response)
       }
