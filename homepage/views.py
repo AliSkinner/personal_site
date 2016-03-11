@@ -26,3 +26,10 @@ def email_me(request):
     body = request.POST['email-me-message']
     send_mail(subject, body, settings.DEFAULT_FROM_EMAIL, ["awskinner26@gmail.com"])
     return HttpResponse('success')
+
+class AboutPageView(TemplateView):
+    template_name = "homepage/about.html"
+
+    def get_context_data(self, **kwargs):
+        context = super(AboutPageView, self).get_context_data(**kwargs)
+        return context
