@@ -17,6 +17,7 @@ class Project(models.Model):
     project_url = models.CharField(max_length=255, blank=False, null=False)
     github_url = models.CharField(max_length=255, blank=False, null=False)
     image = models.ImageField(upload_to="static/images/projects", max_length=255, blank=True, null=True)
+    display_order = models.IntegerField(default=0)
 
     def __unicode__(self):
         return self.name

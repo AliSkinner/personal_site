@@ -35,7 +35,7 @@ TEMPLATE_CONTEXT_PROCESSORS = ["django.contrib.auth.context_processors.auth",
 "django.template.context_processors.media",
 "django.template.context_processors.static",
 "django.template.context_processors.tz",
-"django.contrib.messages.context_processors.messages",
+# "django.contrib.messages.context_processors.messages",
 ]
 
 ALLOWED_HOSTS = []
@@ -104,7 +104,7 @@ STATIC_URL = '/static/'
 # STATIC_ROOT = 'os.path.join(BASE_DIR, "static"),'
 # STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static', 'static')
 
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
+# STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 
 
 STATICFILES_DIRS = [

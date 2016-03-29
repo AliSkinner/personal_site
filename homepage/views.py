@@ -36,7 +36,9 @@ class AboutPageView(TemplateView):
         return context
 
 class ProjectListView(ListView):
-    model = Project
+    # model = Project
+    context_object_name = 'project_list'
+    queryset = Project.objects.all().order_by('display_order')
     template_name = "homepage/projects.html"
 
     def get_context_data(self, **kwargs):

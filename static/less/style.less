@@ -1,64 +1,24 @@
 // out: ../css/style.css, compress: true
-
 @import '../../static/less/site-variables.less';
 
-body {
-  background-color:@pale;
+.navbar-header {
+  .navbar-brand {
+  font-size: 3em;
+  }
+}
+#fork {
+  font-size: 2em;
+}
+.nav.navbar-nav {
   a {
-    color:inherit;
-    &:hover {
-      text-decoration: none;
-      color:inherit;
-
-    }
+    font-size: 1.2em;
   }
 }
-
-header {
-  background:@dark-green;
-  width:100%;
-  color:@pale;
-  padding-top:1em;
-  h1 {
-    display:inline;
-    font-size: 4em;
-  }
-  .dropdown {
-    padding-right:2em;
-  }
-  #fork, #hamburger {
-    font-size: 3em;
-    &:hover {
-      color:@gold;
-    }
-  }
-  .dropdown-menu {
-    font-size:1.5em;
-    color:#283018;
-    text-align: center;
-    padding: 5px 0 0 0;
-    li {
-      border-bottom: 1px dashed rgba(40,48,24,.2) ;
-      a {
-        padding:.5em;
-      }
-    }
-  }
-}
-
-
 .main-footer{
-  background-color:@dark-green;
-  border-color:@dark-green;
-  // width:100%;
-  color:@pale;
   font-size: 3em;
   a {
-    color:@pale;
     padding:0 .2em;
     &:hover {
-      // opacity:.5;
-      color:@gold;
     }
   }
 }
@@ -66,5 +26,9 @@ header {
 #the-footer {
   position: fixed;
   bottom:0;
+  width:100%;
+}
+
+.full-width {
   width:100%;
 }
