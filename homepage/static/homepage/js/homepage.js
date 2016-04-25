@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-<<<<<<< HEAD
   // $('#email-me-form').submit(function(e){
   //   e.preventDefault()
   //
