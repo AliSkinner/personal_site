@@ -35,7 +35,7 @@ TEMPLATE_CONTEXT_PROCESSORS = ["django.contrib.auth.context_processors.auth",
 "django.template.context_processors.media",
 "django.template.context_processors.static",
 "django.template.context_processors.tz",
-"django.contrib.messages.context_processors.messages",
+# "django.contrib.messages.context_processors.messages",
 ]
 
 ALLOWED_HOSTS = []
@@ -101,16 +101,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
-# STATIC_ROOT = 'os.path.join(BASE_DIR, "static"),'
-# STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static', 'static')
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-    '/var/www/static/',
-]
+#
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "static"),
+#     '/var/www/static/',
+# ]
 
 MANDRILL_API_KEY = '3HK_iVh4NKV7yLhAlpnQ-Q'
 EMAIL_BACKEND = "djrill.mail.backends.djrill.DjrillBackend"
