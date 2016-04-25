@@ -1,11 +1,13 @@
 <aside class="hidden-xs col-sm-2" id="nav-list">
-  <ul class="list-unstyled">
-    {% for item in items %}
-    <li id="li-{{item.label|lower}}" data-description="{{item.description}}">
-      <a href="{{item.url}}">
-        {{item.label|capfirst}}
-      </a>
-    </li>
-    {% endfor %}
-  </ul>
+  <nav>
+    <ul class="list-unstyled">
+      {% for item in items %}
+      <li id="li-{{item.label|lower}}" data-description="{{item.description}}">
+        <a href="{{item.url}}">
+          {{item.label|capfirst}}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
 </aside>

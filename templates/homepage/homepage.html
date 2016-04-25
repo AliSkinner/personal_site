@@ -2,7 +2,7 @@
 {% load staticfiles %}
 
 {% block footer_js %}
-  <script type="text/javascript" src="{% static 'homepage/js/homepage.js' %}"></script>
+<script type="text/javascript" src="{% static 'homepage/js/homepage.js' %}"></script>
 {% endblock footer_js%}
 
 {% block content %}
@@ -10,15 +10,15 @@
 
 <div class="row">
 
-{% include "includes/_item-sidebar.html" %}
+  {% include "includes/_item-sidebar.html" %}
 
-  <div class="col-xs-12 col-sm-10 main-upper">
-    <div class="row">
+  <main class="col-xs-12 col-sm-10 main-upper">
+    <section class="row">
       <div class="col-xs-6 col-xs-offset-3 col-md-4 col-md-offset-0">
         <img src="https://s3-eu-west-1.amazonaws.com/assorted-projects/uploads/images/1/portrait2.gif" alt="portrait" />
       </div>
       <div class=" col-xs-12  col-md-8">
-        <h2 class="strap-line">Web Developer / London / UK</h2>
+        <h1 class="strap-line">Web Developer / London / UK</h1>
         <p class="block-text">
           Hi, I'm Ali and I'm a web developer, based in London.<br>
           I'm a big fan of all things Python and Django, but also have a bit of Ruby-on-Rails up my sleeve.<br>
@@ -26,34 +26,9 @@
           Learning everyday.
         </p>
       </div>
-      </div>
-    </div>
-  </div>
-
+    </section>
+  </main>
 </div>
-
-<!-- <div class="row">
-  <div class="col-xs-12 main-lower">
-    <div class="row">
-      <div class=" col-xs-12 col-sm-6 col-sm-offset-4">
-        <p class="block-text">
-          Hi, I'm Ali and I'm a web developer, based in London.<br>
-          I'm a big fan of all things Python and Django, but also have a bit of Ruby-on-Rails up my sleeve.<br>
-          I've been coding since late 2014 and got my first dev job in June 2015.<br>
-          Learning everyday.
-
-        </p>
-      </div>
-    </div>
-  </div>
-</div> -->
-
-
-
-
-
-
-
 
 
 

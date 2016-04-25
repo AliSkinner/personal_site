@@ -1,18 +1,6 @@
 $(document).ready(function(){
 
-  // $('#email-me-form').submit(function(e){
-  //   e.preventDefault()
-  //
-  //   $.post('/email_me/', $(this).serialize(), function(response){
-  //     if (response == 'success' ){
-  //       $('[name="email-me-message"]').val('')
-  //       $('button').after('<h4 class="message-success">Message Sent. Thanks!</h4>')
-  //     } else {
-  //       console.log(response)
-  //     }
-  //   })
-  //   return false
-  // })
+  $('#fork').tooltip()
 
   $('.project-tile').on('click', function(){
     var project = $(this)
