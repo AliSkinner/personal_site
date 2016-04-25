@@ -14,21 +14,6 @@ $(document).ready(function(){
   //   })
   //   return false
   // })
-=======
-  $('#email-me-form').submit(function(e){
-    e.preventDefault()
-
-    $.post('/email_me/', $(this).serialize(), function(response){
-      if (response == 'success' ){
-        $('[name="email-me-message"]').val('')
-        $('button').after('<h4 class="message-success">Message Sent. Thanks!</h4>')
-      } else {
-        console.log(response)
-      }
-    })
-    return false
-  });
-
 
   $('.project-tile').on('click', function(){
     var project = $(this)
@@ -48,6 +33,5 @@ $(document).ready(function(){
 
     $('.modal').modal('show')
   })
->>>>>>> 5524bc84e70ef23037d10ed2ff384db1fe15b143
 
 })
