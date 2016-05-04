@@ -17,6 +17,9 @@
         <li class="col-sm-4 project-tile" data-name="{{project.name}}" data-short-description="{{project.short_description}}" data-long-description="{{project.long_description}}" data-project-url="{{project.project_url}}" data-github-url="{{project.github_url}}">
           <img src="{{project.image}}" alt="{{project.name}}" class="full-width"/>
         </li>
+        {% if forloop.counter|divisibleby:"3" %}
+        </div><div class="row">
+        {% endif %}
         {% endfor%}
       </div>
     </ul>
