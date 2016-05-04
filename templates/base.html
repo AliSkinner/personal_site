@@ -6,60 +6,54 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/superhero/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="{% static 'css/style.css' %}" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="{% static 'homepage/css/homepage.css' %}" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/">Ali Skinner</a>
-    </div>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Ali Skinner</a>
+      </div>
 
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
-        {% for item in items %}
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
+          {% for item in items %}
           <li id="dropdown-{{item.label|lower}}" data-description="{{item.description}}"><a href="{{item.url}}">{{item.label|capfirst}}</a></li>
-        {% endfor %}
-      </ul>
-      <ul class="nav navbar-nav navbar-right hidden-xs">
-        <li><a href="https://github.com/AliSkinner/personal_site" id="fork" class="pull-right" data-toggle="tooltip" data-placement="bottom" title="Checkout this project on GitHub!"><i class="fa fa-code-fork "></i></a></li>
-      </ul>
+          {% endfor %}
+        </ul>
+        <ul class="nav navbar-nav navbar-right hidden-xs">
+          <li><a href="https://github.com/AliSkinner/personal_site" id="fork" class="pull-right" data-toggle="tooltip" data-placement="bottom" title="Checkout this project on GitHub!"><i class="fa fa-code-fork "></i></a></li>
+        </ul>
+      </div>
     </div>
+  </nav>
+
+  <div class="container-fluid">
+    {% block content %}
+    {% endblock content %}
   </div>
-</nav>
 
-<div class="container-fluid">
-  {% block content %}
-  {% endblock content %}
-</div>
-
-<div class="container-fluid" id="the-footer">
-  <div class="row main-footer">
-    <footer class="col-xs-12 ">
-      <span class="footer-icons pull-right">
-        <a href="https://github.com/AliSkinner"><i class="fa fa-github"></i></a>
-        <a href="https://uk.linkedin.com/in/aliskinner"><i class="fa fa-linkedin-square"></i></a>
-      </span>
-    </footer>
-  </div>
-</div>
+  <footer class="main-footer">
+    <ul class="pull-right list-inline">
+      <li><a href="https://github.com/AliSkinner"><i class="fa fa-github"></i></a></li>
+      <li><a href="https://uk.linkedin.com/in/aliskinner"><i class="fa fa-linkedin-square"></i></a></li>
+    </ul>
+  </footer>
 
 
 
-</body>
-<footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="{% static 'js/common.js' %}"></script>
-  {% block footer_js %}{% endblock %}
+</body>
 
-</footer>
+{% block footer_js %}{% endblock %}
+
 </html>

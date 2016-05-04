@@ -10,7 +10,4 @@ urlpatterns = [
     url(r'^about/$', views.AboutPageView.as_view(), name='about'),
     url(r'^projects/$', views.ProjectListView.as_view(), name='projects'),
 
-
-
-
 ]

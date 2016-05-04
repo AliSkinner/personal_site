@@ -41,7 +41,7 @@
 
 @media (min-width:@screen-md-min) {
   .strap-line {
-    padding-top :3em;
+    padding-top : 2em;
   }
 }
 
@@ -61,8 +61,13 @@
 }
 
 .project-tile {
+  margin-bottom: 15px;
   img {
     width:100%;
+    background-color: #000;
+    &:hover {
+      opacity: .8;
+    }
   }
 }
 .modal-content {
@@ -86,19 +91,18 @@
     font-size: 1.2em;
   }
 }
-.main-footer{
+
+.main-footer {
+  position: fixed;
+  bottom:0;
+  width:100%;
   font-size: 3em;
   a {
     padding:0 .2em;
     &:hover {
+      opacity: .8;
     }
   }
-}
-
-#the-footer {
-  position: fixed;
-  bottom:0;
-  width:100%;
 }
 
 .full-width {

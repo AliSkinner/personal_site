@@ -6,13 +6,12 @@
 {% endblock footer_js%}
 
 {% block content %}
-<link rel="stylesheet" href="{% static 'homepage/css/homepage.css' %}" media="screen" title="no title" charset="utf-8">
 
 {% include "includes/_item-sidebar.html" %}
 
-<div class="col-sm-8 contact">
-  <h2>Get in Touch...</h2>
-  <h5>There are a number of ways of contacting me.</h5>
+<main class="col-sm-8 contact">
+  <h1>Get in Touch...</h1>
+  <p>There are a number of ways of contacting me.</p>
   <div class="row">
     <div class="col-sm-4">
       <ul>
@@ -24,7 +23,7 @@
       </ul>
     </div>
     <div class="col-sm-8">
-      <form id="email-me-form" action="/email_me/" method="post" class="">
+      <form id="email-me-form" action="http://formspree.io/ali@aliskinner.com" method="post" class="">
         {% csrf_token %}
         <textarea name="email-me-message" rows="8" cols="40"></textarea>
         <br>
@@ -32,6 +31,6 @@
       </form>
     </div>
   </div>
-</div>
+</main>
 
 {% endblock content %}
